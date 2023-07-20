@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Header from './Components/Header';
+import Feedbackitem from './Components/Feedbackitem';
 
 function App() {
+  const [count, setCount] = useState(0);
+  console.log(useState(20));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Header />
+      <div className="container">
+        <Feedbackitem body='This is an example of text "FeedbackItem 1' />
+        <Feedbackitem body='This is an example of text "FeedbackItem 2' />
+        <Feedbackitem body='This is an example of text "FeedbackItem 3' />
+        <button
+          onClick={() => {
+            setCount(count + 1);
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Click to add item
+        </button>
+        <div>number of count: {count}</div>
+      </div>
+    </>
   );
 }
 
 export default App;
+
+// [
+//   {
+//     id: 1,
+//     rating: 10,
+//     text: 'lorem2lorwemnmkj dmikmkmkasdm mdkmkmasdiiuuuuyyuyyenmm',
+//   },
+//   {
+//     id: 1,
+//     rating: 10,
+//     text: 'lorem2lorwemnmkj dmikmkmkasdm mdkmkmasdiiuuuuyyuyyenmm',
+//   },
+//   {
+//     id: 1,
+//     rating: 10,
+//     text: 'lorem2lorwemnmkj dmikmkmkasdm mdkmkmasdiiuuuuyyuyyenmm',
+//   },
+// ]
