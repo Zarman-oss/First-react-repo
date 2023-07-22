@@ -1,4 +1,4 @@
-function Feedbackitem({ item }) {
+function FeedbackItem({ item }) {
   return (
     <div className="card">
       <div className="num-display">{item.rating}</div>
@@ -7,4 +7,4 @@ function Feedbackitem({ item }) {
   );
 }
 
-export default Feedbackitem;
+export default FeedbackItem;
