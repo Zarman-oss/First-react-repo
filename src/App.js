@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from './Components/Header';
 import FeedbackList from './Components/FeedbackList';
-import FeedbackData from './Data/FeedbackData';
+import FeedbackData from './Data/FeedbackData'; 
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
